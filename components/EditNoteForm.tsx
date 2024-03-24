@@ -1,4 +1,4 @@
-export default function AddNote() {
+export default function EditNoteForm() {
     return (
         <form action="" className="flex flex-col gap-3">
             <input
@@ -17,7 +17,7 @@ export default function AddNote() {
                 type="submit"
                 className="bg-green-800 text-white p-2  py-5 px-6 w-fit "
             >
-                Add Note
+                Update Note
             </button>
 
         </form>
