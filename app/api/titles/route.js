@@ -1,5 +1,5 @@
-import  connectMongoDB  from '$lib/api/mongo';
-import Title from '$lib/api/models/title';
+import  connectMongoDB  from "@/libs/mongodb";
+import  Title  from "@/models/title";
 import {NextResponse} from "next/server";
 
 export async function POST(request) {
