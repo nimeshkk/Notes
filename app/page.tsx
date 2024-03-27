@@ -1,10 +1,11 @@
 
-import Title from "@/components/Title";
+import TitleList from "@/components/TitleList";
+
 
 export default function Home() {
   return (
     <>
-    <Title />
+    <TitleList />
     </>
    
   );
