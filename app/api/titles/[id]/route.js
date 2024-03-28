@@ -12,11 +12,14 @@ export async function PUT(request, {params}) {
 
 }
 
+
 export async function GET(request, {params}) {
     const { id } = params;
     await connectMongoDB();
     const titleUpdate = await Title.findOne({_id: id});
     return NextResponse.json({titleUpdate}, {status: 200});
 }
+
+
     
     

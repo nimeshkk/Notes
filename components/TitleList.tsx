@@ -26,7 +26,7 @@ export default async function TitleList() {
       {titles.map((t) => (
         <div
           key={t._id} 
-          className="p-2 border border-slate-400 mt-2 flex justify-between gap-6 items-start"
+          className="p-4 border border-slate-500 mt-2 flex justify-between gap-6 items-start"
         >
           <div>
             <h1 className="font-bold text-2xl text-black">{t.title}</h1>
