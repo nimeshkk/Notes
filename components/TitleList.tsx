@@ -1,5 +1,6 @@
+import Remove from "@/app/Remove/page";
 import Link from "next/link";
-import { BiEdit, BiTrash } from "react-icons/bi";
+import { BiEdit } from "react-icons/bi";
 
 const fetchTitles = async () => {
   try {
@@ -32,9 +33,7 @@ export default async function TitleList() {
             <p>{t.description}</p>
           </div>
           <div className="flex gap-2">
-            <Link href="/Remove">
-              <BiTrash size={30} className="text-red-600" />
-            </Link>
+            <Remove id={t._id}/>
             <Link href={`/EditNote/${t._id}`}>
               <BiEdit size={30} />
             </Link>
