@@ -12,11 +12,14 @@ export default function AddNote() {
         e.preventDefault();
 
         if (!title || !description) {
-            alert("Please fill in all fields");
+            alert("Please fill in all fields"); 
             return;
         }
         try {
-            const response = await fetch("http://localhost:3000/api/titles", {
+            // const response = await fetch("http://localhost:3000/api/titles", { //use for run in local
+            const response = await fetch("https://notes-nimesh.vercel.app/api/titles", {   
+                
+            
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

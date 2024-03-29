@@ -1,8 +1,11 @@
 import EditNoteForm from "@/components/EditNoteForm";
 
-const getTitleById = async (id: any) => {
+const getTitleById = async (id: any) => {  
   try {
-    const response = await fetch(`http://localhost:3000/api/titles/${id}`, {
+    // const response = await fetch(`http://localhost:3000/api/titles/${id}`, { //use for run in local
+
+    const response = await fetch(`https://notes-nimesh.vercel.app/api/titles/${id}`, {
+
       cache: "no-store",
     });
 

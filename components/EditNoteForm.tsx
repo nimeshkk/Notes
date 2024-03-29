@@ -11,11 +11,12 @@ export default function EditNoteForm({ id, title, description }: { id: string, t
     const router = useRouter();
 
 
-    const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => { 
         e.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:3000/api/titles/${id}`, {
+            // const response = await fetch(`http://localhost:3000/api/titles/${id}`, {  //use for run in local
+            const response = await fetch(`https://notes-nimesh.vercel.app/api/titles/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
