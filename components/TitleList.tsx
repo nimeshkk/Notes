@@ -2,9 +2,10 @@ import Remove from "@/app/Remove/page";
 import Link from "next/link";
 import { BiEdit } from "react-icons/bi";
 
-const fetchTitles = async () => {
+const fetchTitles = async () => {  
   try {
-    const response = await fetch("function:/api/titles ", {
+    // const response = await fetch("http://localhost:3000/api/titles", {
+    const response = await fetch("https://notes-nimesh.vercel.app/api/titles", {  
       cache: "no-store",
     });
     if (!response.ok) {
