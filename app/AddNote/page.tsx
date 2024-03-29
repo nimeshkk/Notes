@@ -8,7 +8,7 @@ export default function AddNote() {
 
     const router = useRouter();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
 
         if (!title || !description) {
@@ -28,7 +28,7 @@ export default function AddNote() {
 
             if (response.ok) {
                 router.push("/");
-                router.refresh(router.asPath);
+                router.refresh();
                 
                
                

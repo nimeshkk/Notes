@@ -1,6 +1,6 @@
 import EditNoteForm from "@/components/EditNoteForm";
 
-const getTitleById = async (id) => {
+const getTitleById = async (id: any) => {
   try {
     const response = await fetch(`http://localhost:3000/api/titles/${id}`, {
       cache: "no-store",
@@ -16,10 +16,10 @@ const getTitleById = async (id) => {
   }
 };
 
-export default async function EditNote({ params }) {
+export default async function EditNote({ params }: { params: any }) {
   const { id } = params;
 
-const  {titleUpdate} = await getTitleById(id);
+  const { titleUpdate } = await getTitleById(id);
 
   const { title, description } = titleUpdate;
   return <EditNoteForm id={id} title={title} description={description} />;

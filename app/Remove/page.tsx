@@ -1,7 +1,7 @@
 'use client';
 import { BiTrash } from "react-icons/bi";
 
-export default function Remove({ id }) {
+export default function Remove({ id }: { id: string }) {
   const removeTitle = async () => {
     const confirmed = confirm("Are you sure you want to delete this title?");
     if (confirmed) {

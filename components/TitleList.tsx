@@ -23,7 +23,7 @@ export default async function TitleList() {
 
   return (
     <>
-      {titles.map((t) => (
+      {titles.map((t:any) => (
         <div
           key={t._id} 
           className="p-4 border border-slate-500 mt-2 flex justify-between gap-6 items-start"

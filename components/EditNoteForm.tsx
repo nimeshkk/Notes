@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function EditNoteForm({ id, title, description}) {
+export default function EditNoteForm({ id, title, description }: { id: string, title: string, description: string }) {
 
     const[newTitle, setNewTitle] = useState(title);
     const[newDescription, setNewDescription] = useState(description);
@@ -11,7 +11,7 @@ export default function EditNoteForm({ id, title, description}) {
     const router = useRouter();
 
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
 
         try {
@@ -27,11 +27,8 @@ export default function EditNoteForm({ id, title, description}) {
 
             if (response.ok) {
                 router.push("/");
-                router.refresh(router.asPath);
-                
-               
-               
-            }else{
+                router.refresh();
+            } else {
                 throw new Error("Failed to update note");
             }
 
