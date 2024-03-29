@@ -4,7 +4,7 @@ import { BiEdit } from "react-icons/bi";
 
 const fetchTitles = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/titles", {
+    const response = await fetch("function:/api/titles ", {
       cache: "no-store",
     });
     if (!response.ok) {
