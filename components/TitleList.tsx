@@ -4,7 +4,7 @@ import { BiEdit } from "react-icons/bi";
 
 const fetchTitles = async () => {
   try {
-    const response = await fetch("https://notes-nimesh-bgwalfuby-nimeshs-projects-08600d9c.vercel.app/api/titles", {
+    const response = await fetch("https://vercel.com/nimeshs-projects-08600d9c/notes-nimesh/DLzf2XBUYPDrwvaMngafmdVVXVrz/source?f=src%2Fapp%2Fapi%2Ftitles%2Froute.js", {
       cache: "no-store",
     });
     if (!response.ok) {
