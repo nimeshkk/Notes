@@ -21,9 +21,7 @@ export default async function TitleList() {
   const titles = await fetchTitles();
   return (
     <>
-      {titles.length === 0 ? (
-        <p>No titles found.</p>
-      ) : (
+      {
         titles.map((t:any) => (
           <div
             key={t._id}
@@ -41,7 +39,7 @@ export default async function TitleList() {
             </div>
           </div>
         ))
-      )}
+      }
     </>
   );
 }
